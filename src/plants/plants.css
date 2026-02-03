@@ -1,0 +1,60 @@
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plant-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.plant-emoji {
+  font-size: 3.25rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.plant-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.plant-price {
+  opacity: 0.75;
+}
+
+.plant-card.selected {
+  outline: 2px solid #040704ff;
+  outline-offset: 2px;
+}
+
+.plant-card button {
+  margin-top: auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 2px solid #00b518ff;
+  background: #00ff08ff;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .plant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+}
